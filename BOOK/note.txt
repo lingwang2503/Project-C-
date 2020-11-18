@@ -1,0 +1,70 @@
+struct login
+{
+string username, password;
+int type; //1 guest 2 nxb 3 author;
+};
+
+
+admin: 
+username admin
+password admin123
+type 0
+
+class checkUser
+{
+public:
+vector <login> listUser;
+checkUser();
+void addUser();
+void delUser;
+bool check(string name, string password, int type);
+
+class publisher : public danhSach
+{
+private:
+string namePub;
+vector <book> listBook;
+bool checkLogin;
+public:
+bool isLogin()
+	{
+	return this-> checkLogin;
+	}
+
+
+
+void addListBook()
+	{
+	(for int i = 0; i< list.size();i++)
+	{
+	if(lits[i].nxb == this->namePub)
+		{
+		this->listBook.resize(listBook.size()+1);
+		this->listBook.push_back(list[i]);
+		}
+	}
+	}
+
+vector<book> getListBook()
+	{
+	return this->listBook;
+	}
+
+void printListBook()
+	{
+	for(int i = 0; i < listBook.size();i++)
+	{
+	listBook[i].outputBook();
+	cout << endl;
+	}
+
+
+NOTE : class publisher, author chứa (string name, pass) 
+
+ĐĂNG KÝ: 
+if type = 1 -> guest.setName(Login.username), guest.setPass(Login.password), guest.setGuestName()
+
+if type = 2 -> tương tự với class publisher
+
+if type = 3 -> tương tự với class author
+
